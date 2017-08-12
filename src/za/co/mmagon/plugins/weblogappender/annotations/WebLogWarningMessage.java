@@ -24,13 +24,12 @@
 package za.co.mmagon.plugins.weblogappender.annotations;
 
 /**
- *
  * @author Marc Magon
  * @since 22 Apr 2017
  */
 public abstract class WebLogWarningMessage extends WebLogMessage
 {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
 }

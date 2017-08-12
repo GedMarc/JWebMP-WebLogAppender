@@ -30,31 +30,37 @@ import za.co.mmagon.jwebswing.base.html.interfaces.GlobalFeatures;
 import za.co.mmagon.jwebswing.base.html.interfaces.events.GlobalEvents;
 
 /**
- *
- * @author Marc Magon
  * @param <C>
  * @param <A>
  * @param <F>
  * @param <E>
  * @param <J>
+ *
+ * @author Marc Magon
  * @since 22 Apr 2017
  */
-public abstract class WebLogAppenderDiv<C extends GlobalChildren, A extends Enum & AttributeDefinitions, F extends GlobalFeatures, E extends GlobalEvents, J extends Div>
-        extends Div<C, A, F, E, J>
+public abstract class WebLogAppenderDiv<C extends GlobalChildren, A extends Enum & AttributeDefinitions, F extends GlobalFeatures, E extends GlobalEvents, J extends WebLogAppenderDiv<C, A, F, E, J>>
+		extends Div<C, A, F, E, J>
 {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    private final Div webLogDisplay;
+	private final Div webLogDisplay;
 
-    /*
-    * Constructs a new WebLogAppenderDiv
-     */
-    public WebLogAppenderDiv()
-    {
-        setID(WebLogAppenderPageConfigurator.getWebLogDivName());
-        this.webLogDisplay = new Div();
-        this.webLogDisplay.setID(WebLogAppenderPageConfigurator.getWebLogDivDisplayName());
-        getChildren().add(webLogDisplay);
-    }
+	/*
+	* Constructs a new WebLogAppenderDiv
+	 */
+	public WebLogAppenderDiv()
+	{
+		setID(WebLogAppenderPageConfigurator.getWebLogDivName());
+		this.webLogDisplay = new Div();
+		this.webLogDisplay.setID(WebLogAppenderPageConfigurator.getWebLogDivDisplayName());
+		getChildren().add(webLogDisplay);
+	}
+
+	public Div getWebLogDisplay()
+	{
+		return webLogDisplay;
+	}
+
 }

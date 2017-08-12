@@ -28,31 +28,30 @@ import za.co.mmagon.jwebswing.base.ajax.AjaxResponse;
 import za.co.mmagon.plugins.atmosphere.abstraction.AtmosphereAdapter;
 
 /**
- *
  * @author Marc Magon
  * @since 22 Apr 2017
  */
 public class WebLogAppenderAtmosphereAdapter extends AtmosphereAdapter
 {
 
-    /*
-    * Constructs a new WebLogAppenderAtmosphereAdapter
-     */
-    public WebLogAppenderAtmosphereAdapter()
-    {
-        //LogManager.getLogManager().getLogger("").addHandler(appender);
-    }
+	/*
+	* Constructs a new WebLogAppenderAtmosphereAdapter
+	 */
+	public WebLogAppenderAtmosphereAdapter()
+	{
+		//LogManager.getLogManager().getLogger("").addHandler(appender);
+	}
 
-    @Override
-    public AjaxResponse onReady()
-    {
-        System.out.println("Web Log Appender Atmosphere Adapter Loaded");
-        return super.onReady();
-    }
+	@Override
+	public AjaxResponse onReady()
+	{
+		System.out.println("Web Log Appender Atmosphere Adapter Loaded");
+		return super.onReady();
+	}
 
-    @Override
-    public void onDisconnect(AtmosphereResourceEvent event)
-    {
-        super.onDisconnect(event);
-    }
+	@Override
+	public void onDisconnect(AtmosphereResourceEvent event)
+	{
+		super.onDisconnect(event);
+	}
 }

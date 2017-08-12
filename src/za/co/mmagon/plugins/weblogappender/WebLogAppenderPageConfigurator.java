@@ -23,141 +23,139 @@
  */
 package za.co.mmagon.plugins.weblogappender;
 
-import java.util.logging.Logger;
 import za.co.mmagon.jwebswing.Component;
 import za.co.mmagon.jwebswing.Page;
 import za.co.mmagon.jwebswing.PageConfigurator;
 import za.co.mmagon.jwebswing.plugins.PluginInformation;
 import za.co.mmagon.logger.LogFactory;
 
+import java.util.logging.Logger;
+
 /**
- *
  * @author GedMarc
  * @since 15 Feb 2017
- *
  */
 @PluginInformation(pluginName = "Web Logger",
-                   pluginUniqueName = "web-log-appender",
-                   pluginDescription = "This plugin outputs system logs into a JWebSwing push function. Instantly send your logs as they happen to your page.",
-                   pluginVersion = "0.1",
-                   pluginDependancyUniqueIDs = "atmosphere",
-                   pluginCategories = "jwebswing, logging",
-                   pluginSubtitle = "Instantly push logs to your pages",
-                   pluginGitUrl = "https://github.com/GedMarc/JWebSwing-ProjectTemplate",
-                   pluginSourceUrl = "https://github.com/GedMarc/JWebSwing-ProjectTemplate",
-                   pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-ProjectTemplate/wiki",
-                   pluginOriginalHomepage = "http://www.jwebswing.com",
-                   pluginDownloadUrl = "",
-                   pluginIconUrl = "",
-                   pluginIconImageUrl = "",
-                   pluginLastUpdatedDate = "2017/03/04"
+		pluginUniqueName = "web-log-appender",
+		pluginDescription = "This plugin outputs system logs into a JWebSwing push function. Instantly send your logs as they happen to your page.",
+		pluginVersion = "0.1",
+		pluginDependancyUniqueIDs = "atmosphere",
+		pluginCategories = "jwebswing, logging",
+		pluginSubtitle = "Instantly push logs to your pages",
+		pluginGitUrl = "https://github.com/GedMarc/JWebSwing-ProjectTemplate",
+		pluginSourceUrl = "https://github.com/GedMarc/JWebSwing-ProjectTemplate",
+		pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-ProjectTemplate/wiki",
+		pluginOriginalHomepage = "http://www.jwebswing.com",
+		pluginDownloadUrl = "",
+		pluginIconUrl = "",
+		pluginIconImageUrl = "",
+		pluginLastUpdatedDate = "2017/03/04"
 )
 public class WebLogAppenderPageConfigurator extends PageConfigurator
 {
 
-    private static final long serialVersionUID = 1L;
-    private static final Logger log = LogFactory.getInstance().getLogger("WebLogAppenderPageConfigurator");
+	public static final String WebConsoleLoggingEnabled = "webconsole-enabled";
+	private static final long serialVersionUID = 1L;
+	private static final Logger log = LogFactory.getInstance().getLogger("WebLogAppenderPageConfigurator");
+	/**
+	 * Sets the log appenderr enabled
+	 */
+	private static boolean Enabled;
+	/**
+	 * Insert the record at the top of the web display div
+	 */
+	private static boolean InsertAtTop;
 
-    public static final String WebConsoleLoggingEnabled = "webconsole-enabled";
-    /**
-     * Sets the log appenderr enabled
-     */
-    private static boolean Enabled;
-    /**
-     * Insert the record at the top of the web display div
-     */
-    private static boolean InsertAtTop;
+	private static String webLogDivName = "WebLogAppenderDiv";
+	private static String webLogDivDisplayName = "WebLogDisplay";
 
-    private static String webLogDivName = "WebLogAppenderDiv";
-    private static String webLogDivDisplayName = "WebLogDisplay";
+	public WebLogAppenderPageConfigurator()
+	{
 
-    public WebLogAppenderPageConfigurator()
-    {
+	}
 
-    }
+	/**
+	 * Sets the component as font awesome required to build
+	 *
+	 * @param component
+	 * @param required
+	 */
+	public static void setRequired(Component component, boolean required)
+	{
+		component.getProperties().put(WebConsoleLoggingEnabled, required);
+	}
 
-    @Override
-    public Page configure(Page page)
-    {
-        if (!page.isConfigured())
-        {
-            if (page.getBody().readChildrenPropertyFirstResult(WebConsoleLoggingEnabled, true))
-            {
-                //page.getBody().getCssReferences().add(FontAwesomeReferencePool.FontAwesomeReference.getJavaScriptReference());
-            }
-        }
-        return page;
-    }
+	/**
+	 * Sets the appender enabled
+	 *
+	 * @return
+	 */
+	public static boolean isEnabled()
+	{
+		return Enabled;
+	}
 
-    /**
-     * Sets the component as font awesome required to build
-     *
-     * @param component
-     * @param required
-     */
-    public static void setRequired(Component component, boolean required)
-    {
-        component.getProperties().put(WebConsoleLoggingEnabled, required);
-    }
+	/**
+	 * Sets the appender disabled
+	 *
+	 * @param Enabled
+	 */
+	public static void setEnabled(boolean Enabled)
+	{
+		WebLogAppenderPageConfigurator.Enabled = Enabled;
+	}
 
-    /**
-     * Sets the appender enabled
-     *
-     * @return
-     */
-    public static boolean isEnabled()
-    {
-        return Enabled;
-    }
+	public static boolean isInsertAtTop()
+	{
+		return InsertAtTop;
+	}
 
-    /**
-     * Sets the appender disabled
-     *
-     * @param Enabled
-     */
-    public static void setEnabled(boolean Enabled)
-    {
-        WebLogAppenderPageConfigurator.Enabled = Enabled;
-    }
+	public static void setInsertAtTop(boolean InsertAtTop)
+	{
+		WebLogAppenderPageConfigurator.InsertAtTop = InsertAtTop;
+	}
 
-    public static boolean isInsertAtTop()
-    {
-        return InsertAtTop;
-    }
+	/**
+	 * Returns the web log div name
+	 *
+	 * @return
+	 */
+	public static String getWebLogDivName()
+	{
+		return webLogDivName;
+	}
 
-    public static void setInsertAtTop(boolean InsertAtTop)
-    {
-        WebLogAppenderPageConfigurator.InsertAtTop = InsertAtTop;
-    }
+	/**
+	 * Sets the web log div name
+	 *
+	 * @param webLogDivName
+	 */
+	public static void setWebLogDivName(String webLogDivName)
+	{
+		WebLogAppenderPageConfigurator.webLogDivName = webLogDivName;
+	}
 
-    /**
-     * Returns the web log div name
-     *
-     * @return
-     */
-    public static String getWebLogDivName()
-    {
-        return webLogDivName;
-    }
+	public static String getWebLogDivDisplayName()
+	{
+		return webLogDivDisplayName;
+	}
 
-    /**
-     * Sets the web log div name
-     *
-     * @param webLogDivName
-     */
-    public static void setWebLogDivName(String webLogDivName)
-    {
-        WebLogAppenderPageConfigurator.webLogDivName = webLogDivName;
-    }
+	public static void setWebLogDivDisplayName(String webLogDivDisplayName)
+	{
+		WebLogAppenderPageConfigurator.webLogDivDisplayName = webLogDivDisplayName;
+	}
 
-    public static String getWebLogDivDisplayName()
-    {
-        return webLogDivDisplayName;
-    }
-
-    public static void setWebLogDivDisplayName(String webLogDivDisplayName)
-    {
-        WebLogAppenderPageConfigurator.webLogDivDisplayName = webLogDivDisplayName;
-    }
+	@Override
+	public Page configure(Page page)
+	{
+		if (!page.isConfigured())
+		{
+			if (page.getBody().readChildrenPropertyFirstResult(WebConsoleLoggingEnabled, true))
+			{
+				//page.getBody().getCssReferences().add(FontAwesomeReferencePool.FontAwesomeReference.getJavaScriptReference());
+			}
+		}
+		return page;
+	}
 
 }

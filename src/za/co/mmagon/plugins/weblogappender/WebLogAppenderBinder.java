@@ -27,23 +27,22 @@ import com.armineasy.injection.abstractions.GuiceInjectorModule;
 import com.armineasy.injection.interfaces.GuiceDefaultBinder;
 
 /**
- *
  * @author Marc Magon
  * @since 22 Apr 2017
  */
 public class WebLogAppenderBinder extends GuiceDefaultBinder
 {
 
-    /*
-    * Constructs a new WebLogAppenderBinder
-     */
-    public WebLogAppenderBinder()
-    {
-        //Nothing needed
-    }
+	/*
+	* Constructs a new WebLogAppenderBinder
+	 */
+	public WebLogAppenderBinder()
+	{
+		//Nothing needed
+	}
 
-    @Override
-    public void onBind(GuiceInjectorModule module)
-    {
-    }
+	@Override
+	public void onBind(GuiceInjectorModule module)
+	{
+	}
 }

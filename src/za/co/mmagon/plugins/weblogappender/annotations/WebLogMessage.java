@@ -23,30 +23,30 @@
  */
 package za.co.mmagon.plugins.weblogappender.annotations;
 
-import java.util.logging.LogRecord;
 import za.co.mmagon.jwebswing.base.html.Div;
 import za.co.mmagon.jwebswing.base.html.attributes.NoAttributes;
 import za.co.mmagon.jwebswing.base.html.interfaces.GlobalChildren;
 import za.co.mmagon.jwebswing.base.html.interfaces.GlobalFeatures;
 import za.co.mmagon.jwebswing.base.html.interfaces.events.GlobalEvents;
 
+import java.util.logging.LogRecord;
+
 /**
- *
  * @author Marc Magon
  * @since 23 Apr 2017
  */
-public abstract class WebLogMessage extends Div<GlobalChildren, NoAttributes, GlobalFeatures, GlobalEvents, Div>
+public abstract class WebLogMessage extends Div<GlobalChildren, NoAttributes, GlobalFeatures, GlobalEvents, WebLogMessage>
 {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    /*
-    * Constructs a new WebLogMessage
-     */
-    public WebLogMessage()
-    {
-        addClass("web-log-message");
-    }
+	/*
+	* Constructs a new WebLogMessage
+	 */
+	public WebLogMessage()
+	{
+		addClass("web-log-message");
+	}
 
-    public abstract void renderMessage(LogRecord record);
+	public abstract void renderMessage(LogRecord record);
 }
