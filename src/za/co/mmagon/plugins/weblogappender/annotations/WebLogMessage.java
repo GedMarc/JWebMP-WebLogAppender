@@ -37,9 +37,9 @@ import java.util.logging.LogRecord;
  */
 public abstract class WebLogMessage extends Div<GlobalChildren, NoAttributes, GlobalFeatures, GlobalEvents, WebLogMessage>
 {
-
+	
 	private static final long serialVersionUID = 1L;
-
+	
 	/*
 	* Constructs a new WebLogMessage
 	 */
@@ -47,6 +47,6 @@ public abstract class WebLogMessage extends Div<GlobalChildren, NoAttributes, Gl
 	{
 		addClass("web-log-message");
 	}
-
+	
 	public abstract void renderMessage(LogRecord record);
 }
