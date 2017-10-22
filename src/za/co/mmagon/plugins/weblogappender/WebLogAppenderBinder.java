@@ -44,5 +44,6 @@ public class WebLogAppenderBinder extends GuiceDefaultBinder
 	@Override
 	public void onBind(GuiceInjectorModule module)
 	{
+		//Nothing needed
 	}
 }

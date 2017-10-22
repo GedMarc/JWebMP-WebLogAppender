@@ -27,9 +27,6 @@ import za.co.mmagon.jwebswing.Component;
 import za.co.mmagon.jwebswing.Page;
 import za.co.mmagon.jwebswing.PageConfigurator;
 import za.co.mmagon.jwebswing.plugins.PluginInformation;
-import za.co.mmagon.logger.LogFactory;
-
-import java.util.logging.Logger;
 
 /**
  * @author GedMarc
@@ -56,7 +53,6 @@ public class WebLogAppenderPageConfigurator extends PageConfigurator
 
 	public static final String WebConsoleLoggingEnabled = "webconsole-enabled";
 	private static final long serialVersionUID = 1L;
-	private static final Logger log = LogFactory.getInstance().getLogger("WebLogAppenderPageConfigurator");
 	/**
 	 * Sets the log appenderr enabled
 	 */
@@ -71,7 +67,7 @@ public class WebLogAppenderPageConfigurator extends PageConfigurator
 
 	public WebLogAppenderPageConfigurator()
 	{
-
+		//Nothing needed
 	}
 
 	/**
@@ -148,13 +144,6 @@ public class WebLogAppenderPageConfigurator extends PageConfigurator
 	@Override
 	public Page configure(Page page)
 	{
-		if (!page.isConfigured())
-		{
-			if (page.getBody().readChildrenPropertyFirstResult(WebConsoleLoggingEnabled, true))
-			{
-				//page.getBody().getCssReferences().add(FontAwesomeReferencePool.FontAwesomeReference.getJavaScriptReference());
-			}
-		}
 		return page;
 	}
 

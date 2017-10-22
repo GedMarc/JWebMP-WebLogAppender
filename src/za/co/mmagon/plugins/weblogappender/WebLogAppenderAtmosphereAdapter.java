@@ -25,7 +25,10 @@ package za.co.mmagon.plugins.weblogappender;
 
 import org.atmosphere.cpr.AtmosphereResourceEvent;
 import za.co.mmagon.jwebswing.base.ajax.AjaxResponse;
+import za.co.mmagon.logger.LogFactory;
 import za.co.mmagon.plugins.atmosphere.abstraction.AtmosphereAdapter;
+
+import java.util.logging.Logger;
 
 /**
  * @author Marc Magon
@@ -33,25 +36,27 @@ import za.co.mmagon.plugins.atmosphere.abstraction.AtmosphereAdapter;
  */
 public class WebLogAppenderAtmosphereAdapter extends AtmosphereAdapter
 {
+	private static final Logger log = LogFactory.getLog("WebLogAtomsphereAdapter");
 
 	/*
 	* Constructs a new WebLogAppenderAtmosphereAdapter
 	 */
 	public WebLogAppenderAtmosphereAdapter()
 	{
-		//LogManager.getLogManager().getLogger("").addHandler(appender);
+		//Nothing needed
 	}
 
 	@Override
 	public AjaxResponse onReady()
 	{
-		System.out.println("Web Log Appender Atmosphere Adapter Loaded");
+		log.info("Web Log Appender Atmosphere Adapter Connected");
 		return super.onReady();
 	}
 
 	@Override
 	public void onDisconnect(AtmosphereResourceEvent event)
 	{
+		log.info("Web Log Appender Atmosphere Adapter Disconnected");
 		super.onDisconnect(event);
 	}
 }

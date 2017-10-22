@@ -63,4 +63,32 @@ public abstract class WebLogAppenderDiv<C extends GlobalChildren, A extends Enum
 		return webLogDisplay;
 	}
 
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (!(o instanceof WebLogAppenderDiv))
+		{
+			return false;
+		}
+		if (!super.equals(o))
+		{
+			return false;
+		}
+
+		WebLogAppenderDiv<?, ?, ?, ?, ?> that = (WebLogAppenderDiv<?, ?, ?, ?, ?>) o;
+
+		return getWebLogDisplay() != null ? getWebLogDisplay().equals(that.getWebLogDisplay()) : that.getWebLogDisplay() == null;
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int result = super.hashCode();
+		result = 31 * result + (getWebLogDisplay() != null ? getWebLogDisplay().hashCode() : 0);
+		return result;
+	}
 }
