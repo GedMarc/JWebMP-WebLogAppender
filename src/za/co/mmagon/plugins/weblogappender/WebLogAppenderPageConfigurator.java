@@ -23,7 +23,6 @@
  */
 package za.co.mmagon.plugins.weblogappender;
 
-import za.co.mmagon.jwebswing.Component;
 import za.co.mmagon.jwebswing.Page;
 import za.co.mmagon.jwebswing.PageConfigurator;
 import za.co.mmagon.jwebswing.plugins.PluginInformation;
@@ -68,17 +67,6 @@ public class WebLogAppenderPageConfigurator extends PageConfigurator
 	public WebLogAppenderPageConfigurator()
 	{
 		//Nothing needed
-	}
-
-	/**
-	 * Sets the component as font awesome required to build
-	 *
-	 * @param component
-	 * @param required
-	 */
-	public static void setRequired(Component component, boolean required)
-	{
-		component.getProperties().put(WebConsoleLoggingEnabled, required);
 	}
 
 	/**
