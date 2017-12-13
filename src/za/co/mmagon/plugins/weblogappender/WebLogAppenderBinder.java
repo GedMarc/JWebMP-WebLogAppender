@@ -23,8 +23,8 @@
  */
 package za.co.mmagon.plugins.weblogappender;
 
-import com.armineasy.injection.abstractions.GuiceInjectorModule;
-import com.armineasy.injection.interfaces.GuiceDefaultBinder;
+import za.co.mmagon.guiceinjection.abstractions.GuiceInjectorModule;
+import za.co.mmagon.guiceinjection.interfaces.GuiceDefaultBinder;
 
 /**
  * @author Marc Magon
