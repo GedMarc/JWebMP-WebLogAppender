@@ -25,8 +25,8 @@ package za.co.mmagon.plugins.weblogappender;
 
 import org.atmosphere.cpr.AtmosphereResourceEvent;
 import za.co.mmagon.jwebswing.base.ajax.AjaxResponse;
+import za.co.mmagon.jwebswing.plugins.atmosphere.abstraction.AtmosphereAdapter;
 import za.co.mmagon.logger.LogFactory;
-import za.co.mmagon.plugins.atmosphere.abstraction.AtmosphereAdapter;
 
 import java.util.logging.Logger;
 
