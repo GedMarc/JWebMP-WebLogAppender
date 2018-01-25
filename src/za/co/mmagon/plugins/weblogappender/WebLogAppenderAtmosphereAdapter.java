@@ -23,6 +23,7 @@
  */
 package za.co.mmagon.plugins.weblogappender;
 
+import org.atmosphere.cpr.AtmosphereResource;
 import org.atmosphere.cpr.AtmosphereResourceEvent;
 import za.co.mmagon.jwebswing.base.ajax.AjaxResponse;
 import za.co.mmagon.jwebswing.plugins.atmosphere.abstraction.AtmosphereAdapter;
@@ -47,10 +48,10 @@ public class WebLogAppenderAtmosphereAdapter extends AtmosphereAdapter
 	}
 
 	@Override
-	public AjaxResponse onReady()
+	public AjaxResponse onReady(AtmosphereResource r)
 	{
 		log.info("Web Log Appender Atmosphere Adapter Connected");
-		return super.onReady();
+		return super.onReady(r);
 	}
 
 	@Override
