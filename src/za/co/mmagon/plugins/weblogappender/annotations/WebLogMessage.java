@@ -23,11 +23,11 @@
  */
 package za.co.mmagon.plugins.weblogappender.annotations;
 
-import za.co.mmagon.jwebswing.base.html.Div;
-import za.co.mmagon.jwebswing.base.html.attributes.NoAttributes;
-import za.co.mmagon.jwebswing.base.html.interfaces.GlobalChildren;
-import za.co.mmagon.jwebswing.base.html.interfaces.GlobalFeatures;
-import za.co.mmagon.jwebswing.base.html.interfaces.events.GlobalEvents;
+import com.jwebmp.base.html.Div;
+import com.jwebmp.base.html.attributes.NoAttributes;
+import com.jwebmp.base.html.interfaces.GlobalChildren;
+import com.jwebmp.base.html.interfaces.GlobalFeatures;
+import com.jwebmp.base.html.interfaces.events.GlobalEvents;
 
 import java.util.logging.LogRecord;
 
