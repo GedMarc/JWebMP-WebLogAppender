@@ -14,13 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.plugins.weblogappender;
+package com.jwebmp.plugins.weblogappender;
 
 import com.jwebmp.base.ajax.AjaxResponse;
+import com.jwebmp.logger.LogFactory;
 import com.jwebmp.plugins.atmosphere.abstraction.AtmosphereAdapter;
 import org.atmosphere.cpr.AtmosphereResource;
 import org.atmosphere.cpr.AtmosphereResourceEvent;
-import za.co.mmagon.logger.LogFactory;
 
 import java.util.logging.Logger;
 
@@ -28,12 +28,13 @@ import java.util.logging.Logger;
  * @author Marc Magon
  * @since 22 Apr 2017
  */
-public class WebLogAppenderAtmosphereAdapter extends AtmosphereAdapter
+public class WebLogAppenderAtmosphereAdapter
+		extends AtmosphereAdapter
 {
 	private static final Logger log = LogFactory.getLog("WebLogAtomsphereAdapter");
 
 	/*
-	* Constructs a new WebLogAppenderAtmosphereAdapter
+	 * Constructs a new WebLogAppenderAtmosphereAdapter
 	 */
 	public WebLogAppenderAtmosphereAdapter()
 	{

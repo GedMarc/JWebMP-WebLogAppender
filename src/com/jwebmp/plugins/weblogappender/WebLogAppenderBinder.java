@@ -21,20 +21,21 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package za.co.mmagon.plugins.weblogappender;
+package com.jwebmp.plugins.weblogappender;
 
-import za.co.mmagon.guiceinjection.abstractions.GuiceInjectorModule;
-import za.co.mmagon.guiceinjection.interfaces.GuiceDefaultBinder;
+import com.jwebmp.guiceinjection.abstractions.GuiceInjectorModule;
+import com.jwebmp.guiceinjection.interfaces.GuiceDefaultBinder;
 
 /**
  * @author Marc Magon
  * @since 22 Apr 2017
  */
-public class WebLogAppenderBinder extends GuiceDefaultBinder
+public class WebLogAppenderBinder
+		extends GuiceDefaultBinder
 {
 
 	/*
-	* Constructs a new WebLogAppenderBinder
+	 * Constructs a new WebLogAppenderBinder
 	 */
 	public WebLogAppenderBinder()
 	{

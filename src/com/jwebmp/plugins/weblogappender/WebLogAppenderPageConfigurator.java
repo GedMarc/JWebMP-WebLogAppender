@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package za.co.mmagon.plugins.weblogappender;
+package com.jwebmp.plugins.weblogappender;
 
 import com.jwebmp.Page;
 import com.jwebmp.PageConfigurator;
@@ -45,9 +45,9 @@ import com.jwebmp.plugins.PluginInformation;
 		pluginDownloadUrl = "",
 		pluginIconUrl = "",
 		pluginIconImageUrl = "",
-		pluginLastUpdatedDate = "2017/03/04"
-)
-public class WebLogAppenderPageConfigurator extends PageConfigurator
+		pluginLastUpdatedDate = "2017/03/04")
+public class WebLogAppenderPageConfigurator
+		extends PageConfigurator
 {
 
 	public static final String WebConsoleLoggingEnabled = "webconsole-enabled";

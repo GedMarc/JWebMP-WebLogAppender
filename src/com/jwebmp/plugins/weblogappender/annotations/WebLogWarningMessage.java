@@ -21,14 +21,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package za.co.mmagon.plugins.weblogappender.annotations;
+package com.jwebmp.plugins.weblogappender.annotations;
 
 /**
  * @author Marc Magon
  * @since 22 Apr 2017
  */
-public abstract class WebLogFinestMessage extends WebLogMessage
-
+public abstract class WebLogWarningMessage
+		extends WebLogMessage
 {
 
 	private static final long serialVersionUID = 1L;

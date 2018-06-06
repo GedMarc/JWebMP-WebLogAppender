@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package za.co.mmagon.plugins.weblogappender.annotations;
+package com.jwebmp.plugins.weblogappender.annotations;
 
 import com.jwebmp.base.html.Div;
 import com.jwebmp.base.html.attributes.NoAttributes;
@@ -35,18 +35,19 @@ import java.util.logging.LogRecord;
  * @author Marc Magon
  * @since 23 Apr 2017
  */
-public abstract class WebLogMessage extends Div<GlobalChildren, NoAttributes, GlobalFeatures, GlobalEvents, WebLogMessage>
+public abstract class WebLogMessage
+		extends Div<GlobalChildren, NoAttributes, GlobalFeatures, GlobalEvents, WebLogMessage>
 {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	/*
-	* Constructs a new WebLogMessage
+	 * Constructs a new WebLogMessage
 	 */
 	public WebLogMessage()
 	{
 		addClass("web-log-message");
 	}
-	
+
 	public abstract void renderMessage(LogRecord record);
 }

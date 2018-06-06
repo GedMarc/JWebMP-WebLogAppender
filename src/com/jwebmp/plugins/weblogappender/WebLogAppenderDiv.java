@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.plugins.weblogappender;
+package com.jwebmp.plugins.weblogappender;
 
 import com.jwebmp.base.html.Div;
 import com.jwebmp.base.html.interfaces.AttributeDefinitions;
@@ -41,13 +41,13 @@ public abstract class WebLogAppenderDiv<C extends GlobalChildren, A extends Enum
 	private final Div webLogDisplay;
 
 	/*
-	* Constructs a new WebLogAppenderDiv
+	 * Constructs a new WebLogAppenderDiv
 	 */
 	public WebLogAppenderDiv()
 	{
 		setID(WebLogAppenderPageConfigurator.getWebLogDivName());
-		this.webLogDisplay = new Div();
-		this.webLogDisplay.setID(WebLogAppenderPageConfigurator.getWebLogDivDisplayName());
+		webLogDisplay = new Div();
+		webLogDisplay.setID(WebLogAppenderPageConfigurator.getWebLogDivDisplayName());
 		getChildren().add(webLogDisplay);
 	}
 
