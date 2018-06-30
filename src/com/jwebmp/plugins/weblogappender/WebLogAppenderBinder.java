@@ -23,8 +23,8 @@
  */
 package com.jwebmp.plugins.weblogappender;
 
-import com.jwebmp.guiceinjection.abstractions.GuiceInjectorModule;
-import com.jwebmp.guiceinjection.interfaces.GuiceDefaultBinder;
+import com.jwebmp.guicedinjection.abstractions.GuiceInjectorModule;
+import com.jwebmp.guicedinjection.interfaces.GuiceDefaultBinder;
 
 /**
  * @author Marc Magon
