@@ -16,7 +16,7 @@
  */
 package com.jwebmp.plugins.weblogappender;
 
-import com.jwebmp.base.ajax.AjaxResponse;
+import com.jwebmp.core.base.ajax.AjaxResponse;
 import com.jwebmp.logger.LogFactory;
 import com.jwebmp.plugins.atmosphere.abstraction.AtmosphereAdapter;
 import org.atmosphere.cpr.AtmosphereResource;
