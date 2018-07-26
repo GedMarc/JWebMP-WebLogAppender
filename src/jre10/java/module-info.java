@@ -11,4 +11,7 @@ module com.jwebmp.plugins.weblogappender {
 	requires java.logging;
 	requires com.jwebmp.plugins.atmosphere;
 	requires atmosphere.runtime;
+
+	opens com.jwebmp.plugins.weblogappender to com.fasterxml.jackson.databind,com.jwebmp.core;
+	opens com.jwebmp.plugins.weblogappender.annotations to com.fasterxml.jackson.databind,com.jwebmp.core;
 }
