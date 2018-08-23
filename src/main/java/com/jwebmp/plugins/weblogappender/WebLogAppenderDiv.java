@@ -18,9 +18,9 @@ package com.jwebmp.plugins.weblogappender;
 
 import com.jwebmp.core.base.html.Div;
 import com.jwebmp.core.base.html.interfaces.AttributeDefinitions;
-import com.jwebmp.core.base.html.interfaces.GlobalChildren;
 import com.jwebmp.core.base.html.interfaces.GlobalFeatures;
 import com.jwebmp.core.base.html.interfaces.events.GlobalEvents;
+import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 
 /**
  * @param <C>
@@ -32,7 +32,7 @@ import com.jwebmp.core.base.html.interfaces.events.GlobalEvents;
  * @author Marc Magon
  * @since 22 Apr 2017
  */
-public abstract class WebLogAppenderDiv<C extends GlobalChildren, A extends Enum & AttributeDefinitions, F extends GlobalFeatures, E extends GlobalEvents, J extends WebLogAppenderDiv<C, A, F, E, J>>
+public abstract class WebLogAppenderDiv<C extends IComponentHierarchyBase, A extends Enum & AttributeDefinitions, F extends GlobalFeatures, E extends GlobalEvents, J extends WebLogAppenderDiv<C, A, F, E, J>>
 		extends Div<C, A, F, E, J>
 {
 
@@ -48,40 +48,23 @@ public abstract class WebLogAppenderDiv<C extends GlobalChildren, A extends Enum
 		setID(WebLogAppenderPageConfigurator.getWebLogDivName());
 		webLogDisplay = new Div();
 		webLogDisplay.setID(WebLogAppenderPageConfigurator.getWebLogDivDisplayName());
-		getChildren().add(webLogDisplay);
-	}
-
-	@Override
-	public boolean equals(Object o)
-	{
-		if (this == o)
-		{
-			return true;
-		}
-		if (!(o instanceof WebLogAppenderDiv))
-		{
-			return false;
-		}
-		if (!super.equals(o))
-		{
-			return false;
-		}
-
-		WebLogAppenderDiv<?, ?, ?, ?, ?> that = (WebLogAppenderDiv<?, ?, ?, ?, ?>) o;
-
-		return getWebLogDisplay() != null ? getWebLogDisplay().equals(that.getWebLogDisplay()) : that.getWebLogDisplay() == null;
-	}
-
-	public Div getWebLogDisplay()
-	{
-		return webLogDisplay;
+		add((C) webLogDisplay);
 	}
 
 	@Override
 	public int hashCode()
 	{
-		int result = super.hashCode();
-		result = 31 * result + (getWebLogDisplay() != null ? getWebLogDisplay().hashCode() : 0);
-		return result;
+		return super.hashCode();
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		return super.equals(o);
+	}
+
+	public Div getWebLogDisplay()
+	{
+		return webLogDisplay;
 	}
 }

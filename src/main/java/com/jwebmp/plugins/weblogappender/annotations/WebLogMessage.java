@@ -25,9 +25,9 @@ package com.jwebmp.plugins.weblogappender.annotations;
 
 import com.jwebmp.core.base.html.Div;
 import com.jwebmp.core.base.html.attributes.NoAttributes;
-import com.jwebmp.core.base.html.interfaces.GlobalChildren;
 import com.jwebmp.core.base.html.interfaces.GlobalFeatures;
 import com.jwebmp.core.base.html.interfaces.events.GlobalEvents;
+import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 
 import java.util.logging.LogRecord;
 
@@ -36,7 +36,7 @@ import java.util.logging.LogRecord;
  * @since 23 Apr 2017
  */
 public abstract class WebLogMessage
-		extends Div<GlobalChildren, NoAttributes, GlobalFeatures, GlobalEvents, WebLogMessage>
+		extends Div<IComponentHierarchyBase, NoAttributes, GlobalFeatures, GlobalEvents, WebLogMessage>
 {
 
 	private static final long serialVersionUID = 1L;
