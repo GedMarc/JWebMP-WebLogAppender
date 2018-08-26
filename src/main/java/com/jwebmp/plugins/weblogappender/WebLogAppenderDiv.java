@@ -38,11 +38,15 @@ public abstract class WebLogAppenderDiv<C extends IComponentHierarchyBase, A ext
 
 	private static final long serialVersionUID = 1L;
 
+	/**
+	 * The actual div for the display
+	 */
 	private final Div webLogDisplay;
 
 	/*
 	 * Constructs a new WebLogAppenderDiv
 	 */
+	@SuppressWarnings("unchecked")
 	public WebLogAppenderDiv()
 	{
 		setID(WebLogAppenderPageConfigurator.getWebLogDivName());
@@ -51,18 +55,36 @@ public abstract class WebLogAppenderDiv<C extends IComponentHierarchyBase, A ext
 		add((C) webLogDisplay);
 	}
 
+	/**
+	 * @return hash-int
+	 */
 	@Override
 	public int hashCode()
 	{
 		return super.hashCode();
 	}
 
+	/**
+	 * Method equals ...
+	 *
+	 * @param o
+	 * 		of type Object
+	 *
+	 * @return boolean
+	 */
 	@Override
 	public boolean equals(Object o)
 	{
 		return super.equals(o);
 	}
 
+	/**
+	 * Method getWebLogDisplay returns the webLogDisplay of this WebLogAppenderDiv object.
+	 * <p>
+	 * The actual div for the display
+	 *
+	 * @return the webLogDisplay (type Div) of this WebLogAppenderDiv object.
+	 */
 	public Div getWebLogDisplay()
 	{
 		return webLogDisplay;
