@@ -51,18 +51,17 @@ import javax.validation.constraints.NotNull;
 public class WebLogAppenderPageConfigurator
 		implements IPageConfigurator
 {
-
 	public static final String WebConsoleLoggingEnabled = "webconsole-enabled";
 	private static final long serialVersionUID = 1L;
 	/**
-	 * Sets the log appenderr enabled
+	 * If this configurator is enabled
 	 */
-	private static boolean Enabled;
+	private static boolean enabled = true;
+
 	/**
 	 * Insert the record at the top of the web display div
 	 */
 	private static boolean InsertAtTop;
-
 	private static String webLogDivName = "WebLogAppenderDiv";
 	private static String webLogDivDisplayName = "WebLogDisplay";
 
@@ -72,28 +71,33 @@ public class WebLogAppenderPageConfigurator
 	}
 
 	/**
-	 * Sets the appender enabled
+	 * Method isEnabled returns the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * <p>
+	 * If this configurator is enabled
 	 *
-	 * @return
+	 * @return the enabled (type boolean) of this AngularAnimatedChangePageConfigurator object.
 	 */
 	public static boolean isEnabled()
 	{
-		return Enabled;
+		return WebLogAppenderPageConfigurator.enabled;
 	}
 
 	/**
-	 * Sets the appender disabled
+	 * Method setEnabled sets the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * <p>
+	 * If this configurator is enabled
 	 *
-	 * @param Enabled
+	 * @param mustEnable
+	 * 		the enabled of this AngularAnimatedChangePageConfigurator object.
 	 */
-	public static void setEnabled(boolean Enabled)
+	public static void setEnabled(boolean mustEnable)
 	{
-		WebLogAppenderPageConfigurator.Enabled = Enabled;
+		WebLogAppenderPageConfigurator.enabled = mustEnable;
 	}
 
 	public static boolean isInsertAtTop()
 	{
-		return InsertAtTop;
+		return WebLogAppenderPageConfigurator.InsertAtTop;
 	}
 
 	public static void setInsertAtTop(boolean InsertAtTop)
@@ -108,7 +112,7 @@ public class WebLogAppenderPageConfigurator
 	 */
 	public static String getWebLogDivName()
 	{
-		return webLogDivName;
+		return WebLogAppenderPageConfigurator.webLogDivName;
 	}
 
 	/**
@@ -123,7 +127,7 @@ public class WebLogAppenderPageConfigurator
 
 	public static String getWebLogDivDisplayName()
 	{
-		return webLogDivDisplayName;
+		return WebLogAppenderPageConfigurator.webLogDivDisplayName;
 	}
 
 	public static void setWebLogDivDisplayName(String webLogDivDisplayName)
@@ -136,6 +140,12 @@ public class WebLogAppenderPageConfigurator
 	public Page configure(Page page)
 	{
 		return page;
+	}
+
+	@Override
+	public boolean enabled()
+	{
+		return WebLogAppenderPageConfigurator.enabled;
 	}
 
 }
