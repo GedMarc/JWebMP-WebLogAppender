@@ -40,16 +40,16 @@ import javax.validation.constraints.NotNull;
 		pluginDependancyUniqueIDs = "atmosphere",
 		pluginCategories = "jwebswing, logging",
 		pluginSubtitle = "Instantly push logs to your pages",
-		pluginGitUrl = "https://github.com/GedMarc/JWebSwing-ProjectTemplate",
-		pluginSourceUrl = "https://github.com/GedMarc/JWebSwing-ProjectTemplate",
-		pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-ProjectTemplate/wiki",
+		pluginGitUrl = "https://github.com/GedMarc/JWebMP-ProjectTemplate",
+		pluginSourceUrl = "https://github.com/GedMarc/JWebMP-ProjectTemplate",
+		pluginWikiUrl = "https://github.com/GedMarc/JWebMP-ProjectTemplate/wiki",
 		pluginOriginalHomepage = "http://www.jwebswing.com",
 		pluginDownloadUrl = "",
 		pluginIconUrl = "",
 		pluginIconImageUrl = "",
 		pluginLastUpdatedDate = "2017/03/04")
 public class WebLogAppenderPageConfigurator
-		implements IPageConfigurator
+		implements IPageConfigurator<WebLogAppenderPageConfigurator>
 {
 	public static final String WebConsoleLoggingEnabled = "webconsole-enabled";
 	private static final long serialVersionUID = 1L;
