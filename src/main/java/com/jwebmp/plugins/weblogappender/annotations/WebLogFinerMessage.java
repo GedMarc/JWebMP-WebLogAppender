@@ -31,6 +31,5 @@ public abstract class WebLogFinerMessage
 		extends WebLogMessage
 {
 
-	private static final long serialVersionUID = 1L;
 
 }

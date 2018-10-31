@@ -32,6 +32,5 @@ public abstract class WebLogFinestMessage
 
 {
 
-	private static final long serialVersionUID = 1L;
 
 }

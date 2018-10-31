@@ -39,7 +39,6 @@ public abstract class WebLogMessage
 		extends Div<IComponentHierarchyBase, NoAttributes, GlobalFeatures, GlobalEvents, WebLogMessage>
 {
 
-	private static final long serialVersionUID = 1L;
 
 	/*
 	 * Constructs a new WebLogMessage

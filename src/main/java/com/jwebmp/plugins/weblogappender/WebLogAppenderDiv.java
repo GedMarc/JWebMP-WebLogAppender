@@ -36,7 +36,6 @@ public abstract class WebLogAppenderDiv<C extends IComponentHierarchyBase, A ext
 		extends Div<C, A, F, E, J>
 {
 
-	private static final long serialVersionUID = 1L;
 
 	/**
 	 * The actual div for the display

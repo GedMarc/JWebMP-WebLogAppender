@@ -52,7 +52,7 @@ public class WebLogAppenderPageConfigurator
 		implements IPageConfigurator<WebLogAppenderPageConfigurator>
 {
 	public static final String WebConsoleLoggingEnabled = "webconsole-enabled";
-	private static final long serialVersionUID = 1L;
+
 	/**
 	 * If this configurator is enabled
 	 */
