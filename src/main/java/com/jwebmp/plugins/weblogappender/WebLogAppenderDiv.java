@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 Marc Magon
+ * Copyright (C) 2017 GedMarc
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -29,7 +29,7 @@ import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
  * @param <E>
  * @param <J>
  *
- * @author Marc Magon
+ * @author GedMarc
  * @since 22 Apr 2017
  */
 public abstract class WebLogAppenderDiv<C extends IComponentHierarchyBase, A extends Enum & AttributeDefinitions, F extends GlobalFeatures, E extends GlobalEvents, J extends WebLogAppenderDiv<C, A, F, E, J>>

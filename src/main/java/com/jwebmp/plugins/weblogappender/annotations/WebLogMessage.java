@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2017 Marc Magon.
+ * Copyright 2017 GedMarc.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -32,7 +32,7 @@ import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 import java.util.logging.LogRecord;
 
 /**
- * @author Marc Magon
+ * @author GedMarc
  * @since 23 Apr 2017
  */
 public abstract class WebLogMessage

@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2017 Marc Magon.
+ * Copyright 2017 GedMarc.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
