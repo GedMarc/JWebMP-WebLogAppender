@@ -1,9 +1,3 @@
-import com.jwebmp.core.services.IPageConfigurator;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions;
-import com.jwebmp.plugins.weblogappender.WebLogAppenderPageConfigurator;
-import com.jwebmp.plugins.weblogappender.implementations.WebLogAppenderExclusionsModule;
-
 module com.jwebmp.plugins.weblogappender {
 
 	exports com.jwebmp.plugins.weblogappender;
@@ -17,9 +11,9 @@ module com.jwebmp.plugins.weblogappender {
 	requires java.logging;
 	requires com.jwebmp.guicedinjection;
 
-	provides IPageConfigurator with WebLogAppenderPageConfigurator;
-	provides IGuiceScanJarExclusions with WebLogAppenderExclusionsModule;
-	provides IGuiceScanModuleExclusions with WebLogAppenderExclusionsModule;
+	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.weblogappender.WebLogAppenderPageConfigurator;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions with com.jwebmp.plugins.weblogappender.implementations.WebLogAppenderExclusionsModule;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.weblogappender.implementations.WebLogAppenderExclusionsModule;
 
 	opens com.jwebmp.plugins.weblogappender to com.fasterxml.jackson.databind, com.jwebmp.core;
 	opens com.jwebmp.plugins.weblogappender.annotations to com.fasterxml.jackson.databind, com.jwebmp.core;
